@@ -1,0 +1,120 @@
+<!-- Welcome page which displays Header with carousel in body   -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <%= favicon_link_tag 'favicon.ico' %>
+    <title><%= content_for?(:title) ? yield(:title) : "Demo Project" %></title>
+    <!-- Latest compiled and minified CSS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.15/datatables.min.css"/>
+ 
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.15/datatables.min.js"></script>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    
+    <%= stylesheet_link_tag   "application" %>
+    
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <div id="imagica"></div>
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Menu</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/"><span class="glyphicon glyphicon-home"></span></a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+            <li>
+              <td><%= link_to "<i class='glyphicon glyphicon-earphone'></i>&nbsp;Contact Us".html_safe , contact_path,"data-toggle" => "modal", 'data-target' => '#Contact' %></td>
+              <div class="modal fade" id="Contact">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">                      
+                  </div>
+                </div>
+              </div>    
+            </li>
+            <li><%= link_to "About Us" , about_path,"data-toggle" => "modal", 'data-target' => '#About'  %>
+              <div class="modal fade" id="About">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">                      
+                  </div>
+                </div>
+              </div>
+            </li>
+            <% if user_signed_in? %>
+              <li><%= link_to "Groups", groups_path %></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Team<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Link One</a></li>
+                    <li><a href="#">Link Two</a></li>
+                    <li><a href="#">Link Three</a></li>
+                    <li><a href="#">Link Four</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right" >
+                <li id ="user_email">Hello <%= current_user.name %>!! </li>
+                <li>
+                <%= link_to "<i class='glyphicon glyphicon-off'></i>&nbsp;Sign Out".html_safe, destroy_user_session_path, :method => :delete,class: "btn-md" %></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    <button type="button" class="btn btn-default btn-sm">
+                    <i class='glyphicon glyphicon-cog'></i></button>
+                  </a>
+                  <ul class="dropdown-menu" class="btn btn-default dropdown-toggle" >
+                    <li> <%= link_to "Edit profile", edit_user_registration_path %></li>
+                    <li> <%= link_to "My events", events_index_path if current_user.email.include? "@gmail.com" %> 
+                    </li>
+                    <li> <%= link_to "Admin Dashboard", users_path if current_user.role.name != 'Regular' %>    
+                    </li>
+                    <li> <%= link_to "Invitation Panel", invitations_path if current_user.role.name != 'Regular' %>    
+                    </li>
+                    </ul>    
+                </li>  
+            <% else %>
+              <li><%= link_to "Sign up", new_user_registration_path , class: "btn" %></li> 
+              <li><%= link_to "Sign in", new_user_session_path , class: "btn"  %></li>      
+            <% end %>
+              </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div>
+        <% flash.each do |name, msg| %>
+        <%= content_tag :div, msg, id: "flash_#{name}", class: "alert alert-info" %>       
+        <% end %>    
+      </div>
+      
+      <div id="content">
+        <%= yield %>
+      </div>
+
+      <footer id="footer">
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2017 Company, Inc. &middot; Privacy</a> &middot; Terms</p>
+      </footer>
+
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <%= javascript_include_tag "application" %>
+    
+  </body>
+</html>

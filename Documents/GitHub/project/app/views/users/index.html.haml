@@ -1,0 +1,65 @@
+/ This is index page visible to only superadmin and admin.It consists of all the registered user in Table.Panel gived various status information about user depending upon their Approval status
+.btn-toolbar.pull-right
+%br/
+%h2 Listing Users
+%br/
+.table-responsive
+  #exTab1.container
+    %ul.nav.nav-pills
+      %li.active
+        %a#tab{"data-toggle" => "tab", :href => "#1a"} All Users
+      %li
+        %a#tab{"data-toggle" => "tab", :href => "#2a"} Un-Approved Users
+      %li
+        %a#tab{"data-toggle" => "tab", :href => "#3a"} Approved Users
+      .tab-content.clearfix
+        #1a.tab-pane.active
+          %table#users-table.table.table-striped.table-bordered.dt-responsive.nowrap{:cellspacing => "10", :width => "100%"}
+            = render 'tablehead'
+            %tbody
+              - @users.each do |user|
+                %tr
+                  %td= link_to "#{user.name}".html_safe, user, "data-toggle" => "modal", 'data-target' => "#show_modal_#{user.id}" , "aria-hidden" => "true"
+                  .modal.fade{:id => "show_modal_#{user.id}"}
+                    .modal-dialog.modal-lg
+                      .modal-content
+                  %td= user.role.name
+                  %td= user.email
+                  %td= check_box_tag :approved ,  user.id, user.approved, data: { url: unapproved_user_path(user.id) }, class: 'user-approved', id: "approved_#{user.id.to_s}"
+                  %td= link_to "<i class='glyphicon glyphicon-pencil'></i>&nbsp; Edit".html_safe , edit_user_path(user),"data-toggle" => "modal", 'data-target' => '#edit_modal' unless user.name == "Superadmin"
+                  %td= link_to "<i class='glyphicon glyphicon-remove-sign'></i>&nbsp; Destroy".html_safe, user, method: :delete, data: { confirm: 'Are you sure?' } if user.role_id !='3'
+        #2a.tab-pane
+          %table#users-table.table.table-striped.table-bordered.dt-responsive.nowrap{:cellspacing => "10", :width => "100%"}
+            = render 'tablehead'
+            %tbody
+              - @users.each do |user|
+                - if !user.approved
+                  %tr
+                    %td= link_to "#{user.name}".html_safe, user, "data-toggle" => "modal", 'data-target' => "#show_modal2_#{user.id}"
+                    .modal.fade{:id => "show_modal2_#{user.id}"}
+                      .modal-dialog.modal-lg
+                        .modal-content
+                    %td= user.role.name
+                    %td= user.email
+                    %td= check_box_tag :approved ,  user.id, user.approved, data: { url: unapproved_user_path(user.id) }, class: 'user-approved', id: "approved_#{user.id.to_s}"
+                    %td= link_to "<i class='glyphicon glyphicon-pencil'></i>&nbsp; Edit".html_safe , edit_user_path(user) if user.role_id = 3
+                    %td= link_to "<i class='glyphicon glyphicon-remove-sign'></i>&nbsp; Destroy".html_safe, user, method: :delete, data: { confirm: 'Are you sure?' } if user.role.name != '3'
+        #3a.tab-pane
+          %table#users-table.table.table-striped.table-bordered.dt-responsive.nowrap{:cellspacing => "10", :width => "100%"}
+            = render 'tablehead'
+            %tbody
+              - @users.each do |user|
+                - if user.approved
+                  %tr
+                    %td= link_to "#{user.name}".html_safe, user, "data-toggle" => "modal", 'data-target' => "#show_modal3_#{user.id}"
+                    .modal.fade{:id => "show_modal3_#{user.id}"}
+                      .modal-dialog.modal-lg
+                        .modal-content
+                    %td= user.role.name
+                    %td= user.email
+                    %td= check_box_tag :approved ,  user.id, user.approved, data: { url: unapproved_user_path(user.id) }, class: 'user-approved', id: "approved_#{user.id.to_s}"
+                    %td= link_to "<i class='glyphicon glyphicon-pencil'></i>&nbsp; Edit".html_safe , edit_user_path(user) if user.role.name !='Superadmin'
+                    %td= link_to "<i class='glyphicon glyphicon-remove-sign'></i>&nbsp; Destroy".html_safe, user, method: :delete, data: { confirm: 'Are you sure?' } if user.role_id != 3
+  #edit_modal.modal.fade
+    .modal-dialog.modal-lg
+      .modal-content{"aria-hidden" => "true"}

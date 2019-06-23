@@ -1,0 +1,18 @@
+<h2><%= t 'devise.invitations.edit.header' %></h2>
+<div class="container">
+  <div id="form">
+    <%= bootstrap_form_for resource, :as => resource_name, :url => invitation_path(resource_name), :html => { :method => :put } do |f| %>
+      <%= devise_error_messages! %>
+      <%= f.hidden_field :invitation_token %>
+      <% if f.object.class.require_password_on_accepting %>
+      <div class="field">  
+      <%= f.password_field :password %>
+      </div>
+      <div class="field">
+      <%= f.password_field :password_confirmation%>
+      </div>
+      <% end %>
+      <p><%= f.submit t("devise.invitations.edit.submit_button") %></p>
+    <% end %>
+  </div>
+</div>

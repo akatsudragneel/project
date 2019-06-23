@@ -1,0 +1,19 @@
+- @invites = User.created_by_invite
+%p
+%table.table.table-striped.table-bordered.dt-responsive.nowrap{:cellspacing => "10", :width => "100%"}
+  %thead
+    %tr
+      %td Invtee Name
+      %td Invitee Email
+      %td Invitation Send At
+      %td Invitation Accepted At
+      %td Invited By
+  %tbody
+    - @invites.each do |i|
+      %tr
+        %td= i.name
+        %td= i.email
+        %td= i.invitation_sent_at
+        %td= i.invitation_accepted_at
+        - invitee = User.find(i.invited_by_id)
+        %td= invitee.name

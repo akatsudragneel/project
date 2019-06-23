@@ -1,0 +1,16 @@
+%h1 Listing Calendar Events
+.container
+  .table-responsive
+    %table#users-table.table.table-striped.table-bordered.dt-responsive.nowrap{:cellspacing => "10", :width => "100%"}
+      %thead
+        %th Event Name
+        %th Event Creator
+        %th Event Link
+        %th Created At
+      %tbody
+        - @events.each do |event|
+          %tr
+            %td= event.name
+            %td= event.creator
+            %td= link_to "View in Calendar", event.link
+            %td= event.created_at

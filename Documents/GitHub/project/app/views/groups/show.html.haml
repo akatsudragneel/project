@@ -1,0 +1,29 @@
+/ Modal for showing Group Details
+.btn-toolbar.pull-right
+  %button.btn.btn-danger{"data-dismiss" => "modal", :type => "button"}
+    %span.glyphicon.glyphicon-remove
+#modal
+  %center
+    %h1 Group Details
+    %table#users-table
+      %tbody
+        %tr
+          %td 1
+          %td Group Name
+          %td= @group.name
+        %tr
+          %td 2
+          %td Created By
+          %td= @group.created_by
+        %tr
+          %td 3
+          %td Public:
+          %td= @group.is_public?
+        %tr
+          %td 4
+          %td Group Members
+          %td
+            - @members.each do |member|
+              - if member.group_id == @group.id
+                - id = member.user_id
+                = @users.find(id).name 

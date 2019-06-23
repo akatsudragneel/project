@@ -1,0 +1,424 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *= require_self
+ *= require rails_bootstrap_forms 
+ *= require dataTables/src/demo_table_jui
+ *= require_tree .
+ */
+.grow:hover { transform: scale(1.1); }
+#comments{
+  width: 90%;
+  margin: auto;
+}
+.post-comments {
+  padding-bottom: 9px;
+  margin: 5px 0 5px;
+  background-size: 100%
+}
+.comment_body{
+  color: black
+}
+#comment-align{
+  text-align: left;
+  margin-left: 20px;
+}
+.comments-nav {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 5px;
+}
+.comment-container{
+  width: 85%;
+  background-color: #80cbc4;
+  margin-left: 5%;
+}
+.post-comments .comment-meta {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 5px;
+}
+.post-comments .media {
+  border-left: 1px dotted #000;
+  border-bottom: 1px dotted #000;
+  margin-bottom: 5px;
+  padding-left: 10px;
+}
+.post-comments .media-heading {
+  font-size: 12px;
+  color: white;
+}
+.post-comments .comment-meta a {
+  font-size: 12px;
+  color: white;
+  font-weight: bolder;
+  margin-right: 5px;
+}
+
+#invitation{
+  padding-left: 56%
+}
+
+blockquote {
+  font: 14px/20px italic Times, serif;
+  padding: 8px;
+  background-color: black;
+  border-top: 1px solid #e1cc89;
+  border-bottom: 1px solid #e1cc89;
+  margin: 5px;
+  text-indent: 23px;
+}
+
+#footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1)); /*Standard*/
+  text-align: center;
+  color: white;
+}
+
+.blue{
+    background-color:blue;
+}
+
+.user_name{
+  font-size:14px;
+  font-weight: bold;
+}
+
+.comments-list .media{
+    border-bottom: 1px dotted #ccc;
+}
+
+#imagica{
+  background-image: url("http://wallpapercave.com/wp/a58UCEi.jpg") ;
+  position: fixed;
+  display: block;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  filter: blur(2px);
+  opacity: 1.2;
+}
+#landing-page{
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.post_wrapper{
+  background-color: #80cbc4;
+  box-shadow: 2px 3px 3px 0px black ;
+}
+
+#form{
+  padding-right: 350px;
+  padding-left: 290px;
+}
+
+.button_container{
+  margin-left: 10%;
+}
+.table-hover>tbody>tr:hover>td, .table-hover>tbody>tr:hover>th {
+  background-color: lightgreen;
+  color:#eeeeee;
+}
+#users-table{
+ background-color: lightblue;
+}
+#users-table_length,#users-table_info{
+  padding-right: 25%;
+  
+}
+
+td,th{
+  color: black;
+  height: 5px;
+}
+
+p{
+  color: white;
+}
+
+#content
+{
+  padding-bottom: 40px;
+}
+
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+#flash_error,
+#flash_alert{
+  color: red;
+}
+#flash_notice{
+  color: green;
+  background-color: white;
+}
+.label:label-info{
+text-align: left
+}
+/*
+ * Base structure
+ */
+h1,h2,h3,h4{
+  color: white;
+}
+html,
+body {
+  height: 100%;
+  background-color: #000;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+body {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
+  
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+p.copyright {
+    margin: 15px 0 0;
+}ss
+
+#exTab1 .tab-content {
+  color : white;
+  background-color: #428bca;
+  padding : 5px 15px;
+}
+
+#exTab2 h3 {
+  color : white;
+  background-color: #428bca;
+  padding : 5px 15px;
+}
+
+#exTab1 .nav-pills > li > a {
+  border-radius: 0;
+}
+
+/* change border radius for the tab , apply corners on top*/
+
+#exTab3 .nav-pills > li > a {
+  border-radius: 4px 4px 0 0 ;
+}
+
+#exTab3 .tab-content {
+  color : white;
+  background-color: #428bca;
+  padding : 5px 15px;
+}
+@media (min-width: 768px) {
+    .omb_row-sm-offset-3 div:first-child[class*="col-"] {
+        margin-left: 25%;
+    }
+}
+
+.omb_login .omb_authTitle {
+    text-align: center;
+  line-height: 300%;
+}
+  
+.omb_login .omb_socialButtons a {
+  color: white; // In yourUse @body-bg 
+  opacity:0.9;
+}
+.omb_login .omb_socialButtons a:hover {
+    color: white;
+  opacity:1;      
+}
+.omb_login .omb_socialButtons .omb_btn-facebook {background: #3b5998;}
+.omb_login .omb_socialButtons .omb_btn-google {background: #c32f10;}
+
+:link{
+  color: #000;
+}
+.field
+{
+  color: white;
+  font-size: 20px;
+}
+@media (min-width: 768px) {
+    .omb_login .omb_forgotPwd {
+        text-align: right;
+    margin-top:10px;
+  }   
+}
+.form-control{border:0; box-shadow:none}
+.form-control:focus{box-shadow:none;}
+
+label{
+  padding-top: 5px; display:block; left:0; width:100%
+}
+
+ #user_show{
+  color: white;
+ }
+    
+ #welcome-content{
+ padding-top: 30%;
+ }   
+ .modal-body,#modal,.modal-content
+{
+  background-image: url("http://www.wallpaperup.com/uploads/wallpapers/2014/09/18/446494/big_thumb_c784eb9363fd0fc832bd36f648c50529.jpg");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+.nav>li>a:focus, .nav>li>a:hover {
+    text-decoration: none;
+    background-color: #8c9aff;
+}
+
+#tab{
+  background-color: #8c9aff;
+}
+#user_email{
+  padding-top: 15px;
+}
+
+.carousel {
+    height: 100%;
+    margin-bottom: -50px;
+    margin-top: -18px;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+.carousel-inner{
+  width:100%;
+  max-height: 900px !important;
+  z-index: -1;
+  }
+/*Cloud for welcome page*/
+#clouds{
+  padding: 100px 0;
+}
+
+.cloud {
+  width: 200px; height: 60px;
+  background: #fff;
+  
+  border-radius: 200px;
+  -moz-border-radius: 200px;
+  -webkit-border-radius: 200px;
+  
+  position: relative; 
+}
+
+.cloud:before, .cloud:after {
+  content: '';
+  position: absolute; 
+  background: #fff;
+  width: 100px; height: 80px;
+  position: absolute; top: -15px; left: 10px;
+  
+  border-radius: 100px;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg);
+  -moz-transform: rotate(30deg);
+}
+
+.cloud:after {
+  width: 120px; height: 120px;
+  top: -55px; left: auto; right: 15px;
+}
+
+/*Time to animate*/
+.x1 {
+  -webkit-animation: moveclouds 15s linear infinite;
+  -moz-animation: moveclouds 15s linear infinite;
+  -o-animation: moveclouds 15s linear infinite;
+}
+
+/*variable speed, opacity, and position of clouds for realistic effect*/
+.x2 {
+  left: 200px;
+  
+  -webkit-transform: scale(0.6);
+  -moz-transform: scale(0.6);
+  transform: scale(0.6);
+  opacity: 0.6; /*opacity proportional to the size*/
+  
+  /*Speed will also be proportional to the size and opacity*/
+  /*More the speed. Less the time in 's' = seconds*/
+  -webkit-animation: moveclouds 25s linear infinite;
+  -moz-animation: moveclouds 25s linear infinite;
+  -o-animation: moveclouds 25s linear infinite;
+}
+
+.x3 {
+  left: -250px; top: -200px;
+  
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  transform: scale(0.8);
+  opacity: 0.8; /*opacity proportional to the size*/
+  
+  -webkit-animation: moveclouds 20s linear infinite;
+  -moz-animation: moveclouds 20s linear infinite;
+  -o-animation: moveclouds 20s linear infinite;
+}
+
+.x4 {
+  left: 470px; top: -250px;
+  
+  -webkit-transform: scale(0.75);
+  -moz-transform: scale(0.75);
+  transform: scale(0.75);
+  opacity: 0.75; /*opacity proportional to the size*/
+  
+  -webkit-animation: moveclouds 18s linear infinite;
+  -moz-animation: moveclouds 18s linear infinite;
+  -o-animation: moveclouds 18s linear infinite;
+}
+
+.x5 {
+  left: -150px; top: -150px;
+  
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  transform: scale(0.8);
+  opacity: 0.8; /*opacity proportional to the size*/
+  
+  -webkit-animation: moveclouds 20s linear infinite;
+  -moz-animation: moveclouds 20s linear infinite;
+  -o-animation: moveclouds 20s linear infinite;
+}
+
+@-webkit-keyframes moveclouds {
+  0% {margin-left: 1000px;}
+  100% {margin-left: -1000px;}
+}
+@-moz-keyframes moveclouds {
+  0% {margin-left: 1000px;}
+  100% {margin-left: -1000px;}
+}
+@-o-keyframes moveclouds {
+  0% {margin-left: 1000px;}
+  100% {margin-left: -1000px;}
+}
+

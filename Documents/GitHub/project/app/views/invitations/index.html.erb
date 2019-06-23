@@ -1,0 +1,123 @@
+<!--Panel to display invited users by admin-->
+<h3 class="margin-top">Invite User</h3>
+<div class="container-fluid"> 
+  <%= form_for(User.new, url: user_invitation_path, method: :post , html: {class: "form-inline"}) do |f|%>
+  <div class="row">
+    <div class="form-group col-xs-4 col-lg-12 col-md-12">
+    </div>   
+    <div class="form-group col-xs-4 col-lg-12 col-md-12">  
+      <%= f.text_field :name, class: "form-control",placeholder: "Name",:required => true%>
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group col-xs-4 col-lg-12 col-md-12">
+    </div>
+    <div class="form-group col-xs-4 col-lg-12 col-md-12">    
+      <div class="field">
+        <br>
+        <%= f.text_field :email, class: "form-control", placeholder:"Email",:required => true %>
+        <%= f.hidden_field :approved, :value => true %>
+      </div>
+    </div>
+  </div>    
+  <%= f.submit "Invite user" , class: "btn btn-success" %>
+  <% end %>
+</div>
+
+<br><br> 
+
+<div id="exTab1" class="container"> 
+  <ul  class="nav nav-pills">
+    <li>
+      <a  href="#1a" data-toggle="tab">Pending Invitations</a>
+    </li>
+    <li>
+      <a href="#2a" data-toggle="tab">Accepted Invitation</a>
+    </li>
+    <li  class="active">
+      <a href="#3a" data-toggle="tab">All Users created by invitations</a>
+    </li>
+    <div class="tab-content clearfix">
+      <div class="tab-pane active" id="1a">    
+        <table   class="table table-striped table-bordered dt-responsive nowrap" cellspacing="10" width="100%" >
+          <thead>
+            <tr><b>
+              <td>Invitee Name</td>
+              <td>Invitee Email</td>
+              <td>Invitation Send At</td>
+              <td>Invitation Accepted At</td>
+              <td>Invited By</td> </b>             
+            </tr>
+          </thead>
+          <% @invites = User.where.not(invitation_accepted_at: nil) %>
+          <tbody>
+            <% @invites.each do |i| %>
+              <tr>
+                <td><%= i.name %></td>
+                <td><%= i.email %></td>
+                <td><%= i.invitation_sent_at %></td>
+                <td><%= i.invitation_accepted_at %></td>
+                  <% invitee = User.find(i.invited_by_id) %>
+                <td><%= invitee.name %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="tab-pane" id="2a">
+        <% @invites = User.invitation_not_accepted %>
+         <p>
+        <table class="table table-striped table-bordered dt-responsive nowrap" cellspacing="10" width="100%" >
+          <thead>
+            <tr>
+              <td>Invitee Name</td>
+              <td>Invitee Email</td>
+              <td>Invitation Send At</td>
+              <td>Invited By</td>              
+            </tr>
+          </thead>
+
+          <tbody>
+            <% @invites.each do |i| %>
+              <tr>
+                <td><%= i.name %></td>
+                <td><%= i.email %></td>
+                <td><%= i.invitation_sent_at %></td>
+                 <% invitee = User.find(i.invited_by_id) %>
+                <td><%= invitee.name %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table> 
+      </div>
+
+      <div class="tab-pane" id="3a">
+        <% @invites = User.created_by_invite %>
+        <p>
+        <table class="table table-striped table-bordered dt-responsive nowrap" cellspacing="10" width="100%" >
+          <thead>
+            <tr>
+              <td>Invtee Name</td>
+              <td>Invitee Email</td>
+              <td>Invitation Send At</th>
+              <td>Invitation Accepted At</td>
+              <td>Invited By</td>              
+            </tr>
+          </thead>
+          <tbody>
+            <% @invites.each do |i| %>
+              <tr>
+                <td><%= i.name %></td>
+                <td><%= i.email %></td>
+                <td><%= i.invitation_sent_at %></td>
+                <td>  <%= i.invitation_accepted_at %></td>
+                <% invitee = User.find(i.invited_by_id) %>
+                <td><%= invitee.name %></td>
+              </tr>
+           <% end %>
+          </tbody>
+        </table>       
+      </div>      
+    </div>
+</div>

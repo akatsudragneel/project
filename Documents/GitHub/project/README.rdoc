@@ -1,0 +1,42 @@
+== README
+Implementation:
+Restricted Access using CanCanCan.
+User login using Devise.
+User Login through Facebook and Google+
+Fetching events from Google Calendar.
+Separate Admin Dashboard.
+User has ability to create groups and add registered members to it.
+User can create posts that members can view
+Users can Comment for posts and reply for comments
+Comments and replies have been implemented in nested format.
+Composed of 3 types of users:1. Regular User 2. Admin User 2. Superadmin
+
+* Ruby version : 2.3.0
+
+* Rails version : 4.2.9
+
+  * Gem File should include
+      gem 'rails', '4.2.9'
+      Use postgresql as the database for Active Record
+      gem 'pg', '~> 0.15'
+      Use SCSS for stylesheets
+      gem 'sass-rails', '~> 5.0'
+      Use Uglifier as compressor for JavaScript assets
+      gem 'uglifier', '>= 1.3.0'
+      Use CoffeeScript for .coffee assets and views
+      gem 'coffee-rails', '~> 4.1.0'
+      gem 'devise'
+      gem 'cancancan', '~> 1.10'
+
+About:
+It is a simple ruby on rails project consisting of following: User registration to access the application.This can be done using facebook,google+ or by signinig up manually.
+Then is Group Creation.Group consists of only registered members and it can be public or private type.
+Each Group can have several Posts created by members of that group.Post have only title and description.
+It is like a discussion forum on a particular topic for the members present in that group.
+For discussion,Each group have comment section.Each comments can have reply and those can have further replies.
+This way discussion can be carried out within that group on that particular topic.
+User Management is as:
+Superadmin has full access over app and is create first time when application starts.
+This is done because all other user in order to access the app have to get approved by Admin or Superadmin.
+Admin and SuperAdmin can access invitation portal through which is they invite new user to sign up.
+Regular user can see only welcome page , posts and can comments .

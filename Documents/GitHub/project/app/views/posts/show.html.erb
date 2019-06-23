@@ -1,0 +1,68 @@
+<!-- A Page to diaplay that Post Created in that Group with all the related Comments by calling comments partial  -->
+<div class="container">
+  <h1 class="title">
+    <%= @post.title%>
+  </h1>
+  
+  <p class="date">
+  <small>
+    Submitted <%= time_ago_in_words(@post.created_at) %>Ago
+  </small>
+  
+  <%= link_to like_group_post_path(@group,@post), class: "like-btn", method: :put, remote: :true do %>
+    <div>  
+      <span>
+        <p>
+          <% @likes_count = @post.get_upvotes.size %>
+          <%if @likes_count>0 %>
+            <i class="fa fa-thumbs-up fa-3x blue"></i>
+          <% else %>
+            <i class="fa fa-thumbs-up fa-3x"></i>
+          <% end %>
+        </p>
+      </span>
+    </div>
+  <% end %>
+  Likes:<span class="likes-count"><%= @likes_count %></span>
+  </p>
+  
+  <p class="body">
+    <%= @post.body %>
+  </p>
+  
+  <% if can? [:destroy,:edit,:update], @post %>
+    <%= link_to "<i class='glyphicon glyphicon-pencil'></i>&nbsp; Edit Post".html_safe, edit_group_post_path(@group,@post),"data-toggle" => "modal", 'data-target' => '#EditModal' %>
+      &nbsp;
+    <%= link_to "<i class='glyphicon glyphicon-remove-sign'></i>&nbsp; Delete Post".html_safe,  group_post_path(@group,@post), method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
+</div>
+
+<hr>
+
+<div id="comments">
+  <h2>
+    <%= @post.comments.count %> Comments
+  </h2>
+  
+  
+    <%= form_for [@group, @post, Comment.new] do |f| %>    
+      <div class="row">   
+        <div class="form-group col-xs-4 col-lg-4 col-md-4">      
+        </div>
+        <div class="form-group col-xs-4 col-lg-4 col-md-4">           
+          <%= f.text_area :body, placeholder: "Add a comment", cols: 30,:required => true %><br/>
+        </div>
+      </div>  
+    <%= f.submit "Add Comment" %>
+    <% end %>
+  <ul>
+    <%= render(partial: 'comments/comment', collection: @post.comments.order(:updated_at).reverse_order) %>
+  </ul>
+</div>
+
+<div class="modal fade" id="EditModal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">                      
+    </div>
+  </div>
+</div>

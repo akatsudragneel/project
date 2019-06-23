@@ -1,0 +1,63 @@
+<div class="container">
+  <h3 class="omb_authTitle">Login   OR   <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+  <%= link_to "Signup", new_user_registration_path %>
+  <% end -%> </h3>
+    <%= bootstrap_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="row">
+      <div class="form-group col-xs-4 col-lg-4 col-md-4">
+      </div>
+      <div class="form-group col-xs-4 col-lg-4 col-md-4">
+      <div class="field" class="omb_authTitle" >
+        <%= f.email_field :email, autofocus: true %>
+      </div>
+      </div>
+      </div>
+      <div class="row">
+      <div class="form-group col-xs-4 col-lg-4 col-md-4">
+      </div>
+      <div class="form-group col-xs-4 col-lg-4 col-md-4">  
+      <div class="field" class="col-xs-4 col-sm-2 col-md-4">
+         <%= f.password_field :password, autocomplete: "off" %>
+      </div>
+      </div>
+      </div>
+      <% if devise_mapping.rememberable? -%>
+          <%= f.check_box :remember_me %>
+      <% end -%>
+      <div class="row">
+      <div class="form-group col-xs-4 col-lg-4 col-md-4">
+      </div>
+      <div class="form-group col-xs-4 col-lg-4 col-md-4">
+      <div class="actions">
+        <%= f.button "Sign in" , class: "btn btn-success btn-lg btn-block", data: {disable_with: "<i class='fa fa-spinner fa-spin fa-3x fa-fw'></i> Signing in..."} %>
+      </div>
+      </div>
+      </div>
+    <% end %>
+  
+  <%= render "devise/shared/links" %> 
+  <div class="button_container">   
+    <div class="row row-centered">
+    <div class="omb_login">
+      <div class="row omb_row-sm-offset-3 omb_loginOr">
+        <div class="col-xs-12 col-sm-4">
+          <hr class="omb_hrOr">
+          <p><span class="omb_spanOr">OR</span></p>
+        </div>
+      </div>
+      <div class="row omb_row-sm-offset-3 omb_socialButtons" >
+        <div class="col-xs-4 col-sm-2 ">
+          <%= link_to "Facebook", user_facebook_omniauth_authorize_path, class: "btn btn-lg btn-block omb_btn-facebook" %>
+          <i class="fa fa-facebook visible-xs" aria-hidden= "true"></i>
+          <span class="hidden-xs"></span>
+        </div> 
+        <div class="col-xs-4 col-sm-2">
+          <%= link_to "Google+", user_google_oauth2_omniauth_authorize_path, class: "btn btn-lg btn-block omb_btn-google" %>
+          <i class="fa fa-google-plus visible-xs"></i>
+          <span class="hidden-xs"></span>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>  

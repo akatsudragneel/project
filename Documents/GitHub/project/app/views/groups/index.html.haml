@@ -1,0 +1,33 @@
+/ Table displaying all the groups created.Superadmin can see all groups whereas others can see who belongs to that group
+%h1 Listing Groups
+.btn-group
+  = link_to 'Create New Group', new_group_path, class: "btn btn-default"
+.container
+  .table-responsive
+    %table#users-table.table-condensed.table-hover{:cellspacing => "10", :width => "100%"}
+      %thead
+        %th Group Name
+        %th Group Creator
+        %th Add/Delete Members
+        %th View Posts
+        %th Delete Group
+      %tbody
+        - @groups.each do |group|
+          - if (group.is_public) || (@member.where(group_id: group.id).present?) || current_user.superadmin?
+            %tr{:class => "row_#{group.id}"}
+              %td
+                = link_to "#{group.name}".html_safe, group, "data-toggle" => "modal", 'data-target' => "#show_modal_#{group.id}"
+                .modal.fade{:id => "show_modal_#{group.id}"}
+                  .modal-dialog.modal-lg
+                    .modal-content
+              %td
+                = group.created_by
+              %td
+                - if can? :add_members, group
+                  = link_to "Edit",add_members_group_path(group)
+              %td
+                - if can? :read, group
+                  = link_to "Posts for this Group",group_posts_path(group)
+              %td
+                - if can? :destroy, group
+                  = link_to "<i class='glyphicon glyphicon-remove-sign'></i>&nbsp; Destroy".html_safe, group,remote: true, method: :delete, data: { confirm: 'Are you sure?' }

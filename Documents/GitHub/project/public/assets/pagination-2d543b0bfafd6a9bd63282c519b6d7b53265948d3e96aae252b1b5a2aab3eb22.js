@@ -1,0 +1,1 @@
+$(function(){$(".pagination a").click(function(){return $.getScript(this.href),!1})});

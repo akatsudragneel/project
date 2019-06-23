@@ -1,0 +1,1182 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+
+
+
+
+ */
+
+
+.grow:hover { transform: scale(1.1); }
+#comments{
+  width: 90%;
+  margin: auto;
+}
+.post-comments {
+  padding-bottom: 9px;
+  margin: 5px 0 5px;
+  background-size: 100%
+}
+.comment_body{
+  color: black
+}
+#comment-align{
+  text-align: left;
+  margin-left: 20px;
+}
+.comments-nav {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 5px;
+}
+.comment-container{
+  width: 85%;
+  background-color: #80cbc4;
+  margin-left: 5%;
+}
+.post-comments .comment-meta {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 5px;
+}
+.post-comments .media {
+  border-left: 1px dotted #000;
+  border-bottom: 1px dotted #000;
+  margin-bottom: 5px;
+  padding-left: 10px;
+}
+.post-comments .media-heading {
+  font-size: 12px;
+  color: white;
+}
+.post-comments .comment-meta a {
+  font-size: 12px;
+  color: white;
+  font-weight: bolder;
+  margin-right: 5px;
+}
+
+#invitation{
+  padding-left: 56%
+}
+
+blockquote {
+  font: 14px/20px italic Times, serif;
+  padding: 8px;
+  background-color: black;
+  border-top: 1px solid #e1cc89;
+  border-bottom: 1px solid #e1cc89;
+  margin: 5px;
+  text-indent: 23px;
+}
+
+#footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1)); /*Standard*/
+  text-align: center;
+  color: white;
+}
+
+.blue{
+    background-color:blue;
+}
+
+.user_name{
+  font-size:14px;
+  font-weight: bold;
+}
+
+.comments-list .media{
+    border-bottom: 1px dotted #ccc;
+}
+
+#imagica{
+  background-image: url("http://wallpapercave.com/wp/a58UCEi.jpg") ;
+  position: fixed;
+  display: block;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  filter: blur(2px);
+  opacity: 1.2;
+}
+#landing-page{
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.post_wrapper{
+  background-color: #80cbc4;
+  box-shadow: 2px 3px 3px 0px black ;
+}
+
+#form{
+  padding-right: 350px;
+  padding-left: 290px;
+}
+
+.button_container{
+  margin-left: 10%;
+}
+.table-hover>tbody>tr:hover>td, .table-hover>tbody>tr:hover>th {
+  background-color: lightgreen;
+  color:#eeeeee;
+}
+#users-table{
+ background-color: lightblue;
+}
+#users-table_length,#users-table_info{
+  padding-right: 25%;
+  
+}
+
+td,th{
+  color: black;
+  height: 5px;
+}
+
+p{
+  color: white;
+}
+
+#content
+{
+  padding-bottom: 40px;
+}
+
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+#flash_error,
+#flash_alert{
+  color: red;
+}
+#flash_notice{
+  color: green;
+  background-color: white;
+}
+.label:label-info{
+text-align: left
+}
+/*
+ * Base structure
+ */
+h1,h2,h3,h4{
+  color: white;
+}
+html,
+body {
+  height: 100%;
+  background-color: #000;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+body {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
+  
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+p.copyright {
+    margin: 15px 0 0;
+}ss
+
+#exTab1 .tab-content {
+  color : white;
+  background-color: #428bca;
+  padding : 5px 15px;
+}
+
+#exTab2 h3 {
+  color : white;
+  background-color: #428bca;
+  padding : 5px 15px;
+}
+
+#exTab1 .nav-pills > li > a {
+  border-radius: 0;
+}
+
+/* change border radius for the tab , apply corners on top*/
+
+#exTab3 .nav-pills > li > a {
+  border-radius: 4px 4px 0 0 ;
+}
+
+#exTab3 .tab-content {
+  color : white;
+  background-color: #428bca;
+  padding : 5px 15px;
+}
+@media (min-width: 768px) {
+    .omb_row-sm-offset-3 div:first-child[class*="col-"] {
+        margin-left: 25%;
+    }
+}
+
+.omb_login .omb_authTitle {
+    text-align: center;
+  line-height: 300%;
+}
+  
+.omb_login .omb_socialButtons a {
+  color: white; // In yourUse @body-bg 
+  opacity:0.9;
+}
+.omb_login .omb_socialButtons a:hover {
+    color: white;
+  opacity:1;      
+}
+.omb_login .omb_socialButtons .omb_btn-facebook {background: #3b5998;}
+.omb_login .omb_socialButtons .omb_btn-google {background: #c32f10;}
+
+:link{
+  color: #000;
+}
+.field
+{
+  color: white;
+  font-size: 20px;
+}
+@media (min-width: 768px) {
+    .omb_login .omb_forgotPwd {
+        text-align: right;
+    margin-top:10px;
+  }   
+}
+.form-control{border:0; box-shadow:none}
+.form-control:focus{box-shadow:none;}
+
+label{
+  padding-top: 5px; display:block; left:0; width:100%
+}
+
+ #user_show{
+  color: white;
+ }
+    
+ #welcome-content{
+ padding-top: 30%;
+ }   
+ .modal-body,#modal,.modal-content
+{
+  background-image: url("http://www.wallpaperup.com/uploads/wallpapers/2014/09/18/446494/big_thumb_c784eb9363fd0fc832bd36f648c50529.jpg");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+.nav>li>a:focus, .nav>li>a:hover {
+    text-decoration: none;
+    background-color: #8c9aff;
+}
+
+#tab{
+  background-color: #8c9aff;
+}
+#user_email{
+  padding-top: 15px;
+}
+
+.carousel {
+    height: 100%;
+    margin-bottom: -50px;
+    margin-top: -18px;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+.carousel-inner{
+  width:100%;
+  max-height: 900px !important;
+  z-index: -1;
+  }
+.rails-bootstrap-forms-date-select select,
+.rails-bootstrap-forms-time-select select,
+.rails-bootstrap-forms-datetime-select select {
+  display: inline-block;
+  width: auto;
+}
+
+.rails-bootstrap-forms-error-summary {
+  margin-top: 10px;
+}
+/*
+ *  File:         demo_table_jui.css
+ *  CVS:          $Id$
+ *  Description:  CSS descriptions for DataTables demo pages
+ *  Author:       Allan Jardine
+ *  Created:      Tue May 12 06:47:22 BST 2009
+ *  Modified:     $Date$ by $Author$
+ *  Language:     CSS
+ *  Project:      DataTables
+ *
+ *  Copyright 2009 Allan Jardine. All Rights Reserved.
+ *
+ * ***************************************************************************
+ * DESCRIPTION
+ *
+ * The styles given here are suitable for the demos that are used with the standard DataTables
+ * distribution (see www.datatables.net). You will most likely wish to modify these styles to
+ * meet the layout requirements of your site.
+ *
+ * Common issues:
+ *   'full_numbers' pagination - I use an extra selector on the body tag to ensure that there is
+ *     no conflict between the two pagination types. If you want to use full_numbers pagination
+ *     ensure that you either have "example_alt_pagination" as a body class name, or better yet,
+ *     modify that selector.
+ *   Note that the path used for Images is relative. All images are by default located in
+ *     ../images/ - relative to this CSS file.
+ */
+/*
+ * jQuery UI specific styling
+ */
+/* line 35, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+.paging_two_button .ui-button {
+  float: left;
+  cursor: pointer;
+  cursor: hand;
+}
+
+/* line 41, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+.paging_full_numbers .ui-button {
+  padding: 2px 6px;
+  margin: 0;
+  cursor: pointer;
+  cursor: hand;
+  color: #333 !important;
+}
+
+/* line 49, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+.dataTables_paginate .ui-button {
+  margin-right: -0.1em !important;
+}
+
+/* line 53, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+.paging_full_numbers {
+  width: 350px !important;
+}
+
+/* line 57, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+.dataTables_wrapper .ui-toolbar {
+  padding: 5px;
+  margin: 0 auto;
+}
+
+/* line 62, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+.dataTables_paginate {
+  width: auto;
+}
+
+/* line 66, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+.dataTables_info {
+  padding-top: 3px;
+}
+
+/* line 70, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+table.display thead th {
+  padding: 3px 0px 3px 10px;
+  cursor: pointer;
+  cursor: hand;
+}
+
+/* line 76, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+div.dataTables_wrapper .ui-widget-header {
+  font-weight: normal;
+}
+
+/*
+ * Sort arrow icon positioning
+ */
+/* line 84, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+table.display thead th div.DataTables_sort_wrapper {
+  position: relative;
+  padding-right: 20px;
+  padding-right: 20px;
+}
+
+/* line 90, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+table.display thead th div.DataTables_sort_wrapper span {
+  position: absolute;
+  top: 50%;
+  margin-top: -8px;
+  right: 0;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *
+ * Everything below this line is the same as demo_table.css. This file is
+ * required for 'cleanliness' of the markup
+ *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * DataTables features
+ */
+/* Wrapper only effects the Header and Footer content, not the results in the DataTable */
+/* line 114, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+.dataTables_wrapper {
+  position: relative;
+  clear: both;
+}
+
+/* line 119, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+.dataTables_processing {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  width: 250px;
+  margin-left: -125px;
+  border: 1px solid #ddd;
+  text-align: center;
+  color: #999;
+  font-size: 11px;
+  padding: 2px 0;
+}
+
+/* Length is the dropdown which selects the number of items to return */
+/* line 133, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+.dataTables_length {
+  width: 40%;
+  float: left;
+}
+
+/* Filter is the Search Field  */
+/* line 139, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+.dataTables_filter {
+  width: 50%;
+  float: right;
+  text-align: right;
+  padding: 3px;
+}
+
+/* Info is the footer which displays the number of results displaying out of the total number of results  */
+/* line 147, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+.dataTables_info {
+  width: 50%;
+  float: left;
+}
+
+/* Paginate is the footer which lists the pages */
+/* line 153, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+.dataTables_paginate {
+  float: right;
+  text-align: right;
+  padding: 3px;
+}
+
+/* Pagination nested */
+/* line 160, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+.paginate_disabled_previous, .paginate_enabled_previous, .paginate_disabled_next, .paginate_enabled_next {
+  height: 19px;
+  width: 19px;
+  margin-left: 3px;
+  float: left;
+}
+
+/* line 167, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+.paginate_disabled_previous {
+  background-image: url("/assets/dataTables/back_disabled.jpg");
+}
+
+/* line 171, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+.paginate_enabled_previous {
+  background-image: url("/assets/dataTables/back_enabled.jpg");
+}
+
+/* line 175, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+.paginate_disabled_next {
+  background-image: url("/assets/dataTables/forward_disabled.jpg");
+}
+
+/* line 179, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+.paginate_enabled_next {
+  background-image: url("/assets/dataTables/forward_enabled.jpg");
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * DataTables display
+ */
+/* line 188, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+table.display {
+  margin: 0 auto;
+  width: 100%;
+  clear: both;
+  border-collapse: collapse;
+}
+
+/* line 195, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+table.display tfoot th {
+  padding: 3px 0px 3px 10px;
+  font-weight: bold;
+  font-weight: normal;
+}
+
+/* line 201, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+table.display tr.heading2 td {
+  border-bottom: 1px solid #aaa;
+}
+
+/* line 205, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+table.display td {
+  padding: 3px 10px;
+}
+
+/* line 209, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+table.display td.center {
+  text-align: center;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * DataTables sorting
+ */
+/* line 219, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+.sorting_asc {
+  background: url(/assets/dataTables/sort_asc-ee6010bb0a8d17e58307136a0fbf0b196d949ab6c50eb66d1ff8f0a7d2a4d48b.png) no-repeat center right;
+}
+
+/* line 223, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+.sorting_desc {
+  background: url(/assets/dataTables/sort_desc-26da8e7eaf746a08dec2928977be21aa67212484540a12042b86aa2d904b80e8.png) no-repeat center right;
+}
+
+/* line 227, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+.sorting {
+  background: url(/assets/dataTables/sort_both-624f0a471a2535c4754e1f6974b0e64ee70d6907738346e2a11d0bff20258b8c.png) no-repeat center right;
+}
+
+/* line 231, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+.sorting_asc_disabled {
+  background: url(/assets/dataTables/sort_asc_disabled-50f0e16f8289b1f09eb0d0494d0eee7ae4717e857a4ed77997bb06cefecb2528.png) no-repeat center right;
+}
+
+/* line 235, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+.sorting_desc_disabled {
+  background: url(/assets/dataTables/sort_desc_disabled-3450cc1e5a1585690226a713a726753b3fa2d177e41338a36e0a3188e3f02663.png) no-repeat center right;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * DataTables row classes
+ */
+/* line 245, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+table.display tr.odd.gradeA {
+  background-color: #ddffdd;
+}
+
+/* line 249, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+table.display tr.even.gradeA {
+  background-color: #eeffee;
+}
+
+/* line 256, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+table.display tr.odd.gradeA {
+  background-color: #ddffdd;
+}
+
+/* line 260, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+table.display tr.even.gradeA {
+  background-color: #eeffee;
+}
+
+/* line 264, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+table.display tr.odd.gradeC {
+  background-color: #ddddff;
+}
+
+/* line 268, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+table.display tr.even.gradeC {
+  background-color: #eeeeff;
+}
+
+/* line 272, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+table.display tr.odd.gradeX {
+  background-color: #ffdddd;
+}
+
+/* line 276, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+table.display tr.even.gradeX {
+  background-color: #ffeeee;
+}
+
+/* line 280, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+table.display tr.odd.gradeU {
+  background-color: #ddd;
+}
+
+/* line 284, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+table.display tr.even.gradeU {
+  background-color: #eee;
+}
+
+/* line 289, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+tr.odd {
+  background-color: #E2E4FF;
+}
+
+/* line 293, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+tr.even {
+  background-color: white;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * Misc
+ */
+/* line 304, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+.dataTables_scroll {
+  clear: both;
+}
+
+/* line 308, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+.top, .bottom {
+  padding: 15px;
+  background-color: #F5F5F5;
+  border: 1px solid #CCCCCC;
+}
+
+/* line 314, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+.top .dataTables_info {
+  float: none;
+}
+
+/* line 318, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+.clear {
+  clear: both;
+}
+
+/* line 322, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+.dataTables_empty {
+  text-align: center;
+}
+
+/* line 326, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+tfoot input {
+  margin: 0.5em 0;
+  width: 100%;
+  color: #444;
+}
+
+/* line 332, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+tfoot input.search_init {
+  color: #999;
+}
+
+/* line 336, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+td.group {
+  background-color: #d1cfd0;
+  border-bottom: 2px solid #A19B9E;
+  border-top: 2px solid #A19B9E;
+}
+
+/* line 342, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+td.details {
+  background-color: #d1cfd0;
+  border: 2px solid #A19B9E;
+}
+
+/* line 348, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+.example_alt_pagination div.dataTables_info {
+  width: 40%;
+}
+
+/* line 352, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+.paging_full_numbers a.paginate_button,
+.paging_full_numbers a.paginate_active {
+  border: 1px solid #aaa;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  padding: 2px 5px;
+  margin: 0 3px;
+  cursor: pointer;
+  *cursor: hand;
+  color: #333 !important;
+}
+
+/* line 364, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+.paging_full_numbers a.paginate_button {
+  background-color: #ddd;
+}
+
+/* line 368, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+.paging_full_numbers a.paginate_button:hover {
+  background-color: #ccc;
+  text-decoration: none !important;
+}
+
+/* line 373, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+.paging_full_numbers a.paginate_active {
+  background-color: #99B3FF;
+}
+
+/* line 377, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+table.display tr.even.row_selected td {
+  background-color: #B0BED9;
+}
+
+/* line 381, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+table.display tr.odd.row_selected td {
+  background-color: #9FAFD1;
+}
+
+/*
+ * Sorting classes for columns
+ */
+/* For the standard odd/even */
+/* line 390, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+tr.odd td.sorting_1 {
+  background-color: #D3D6FF;
+}
+
+/* line 394, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+tr.odd td.sorting_2 {
+  background-color: #DADCFF;
+}
+
+/* line 398, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+tr.odd td.sorting_3 {
+  background-color: #E0E2FF;
+}
+
+/* line 402, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+tr.even td.sorting_1 {
+  background-color: #EAEBFF;
+}
+
+/* line 406, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+tr.even td.sorting_2 {
+  background-color: #F2F3FF;
+}
+
+/* line 410, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+tr.even td.sorting_3 {
+  background-color: #F9F9FF;
+}
+
+/* For the Conditional-CSS grading rows */
+/*
+ 	Colour calculations (based off the main row colours)
+  Level 1:
+		dd > c4
+		ee > d5
+	Level 2:
+	  dd > d1
+	  ee > e2
+ */
+/* line 425, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+tr.odd.gradeA td.sorting_1 {
+  background-color: #c4ffc4;
+}
+
+/* line 429, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+tr.odd.gradeA td.sorting_2 {
+  background-color: #d1ffd1;
+}
+
+/* line 433, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+tr.odd.gradeA td.sorting_3 {
+  background-color: #d1ffd1;
+}
+
+/* line 437, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+tr.even.gradeA td.sorting_1 {
+  background-color: #d5ffd5;
+}
+
+/* line 441, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+tr.even.gradeA td.sorting_2 {
+  background-color: #e2ffe2;
+}
+
+/* line 445, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+tr.even.gradeA td.sorting_3 {
+  background-color: #e2ffe2;
+}
+
+/* line 449, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+tr.odd.gradeC td.sorting_1 {
+  background-color: #c4c4ff;
+}
+
+/* line 453, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+tr.odd.gradeC td.sorting_2 {
+  background-color: #d1d1ff;
+}
+
+/* line 457, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+tr.odd.gradeC td.sorting_3 {
+  background-color: #d1d1ff;
+}
+
+/* line 461, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+tr.even.gradeC td.sorting_1 {
+  background-color: #d5d5ff;
+}
+
+/* line 465, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+tr.even.gradeC td.sorting_2 {
+  background-color: #e2e2ff;
+}
+
+/* line 469, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+tr.even.gradeC td.sorting_3 {
+  background-color: #e2e2ff;
+}
+
+/* line 473, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+tr.odd.gradeX td.sorting_1 {
+  background-color: #ffc4c4;
+}
+
+/* line 477, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+tr.odd.gradeX td.sorting_2 {
+  background-color: #ffd1d1;
+}
+
+/* line 481, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+tr.odd.gradeX td.sorting_3 {
+  background-color: #ffd1d1;
+}
+
+/* line 485, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+tr.even.gradeX td.sorting_1 {
+  background-color: #ffd5d5;
+}
+
+/* line 489, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+tr.even.gradeX td.sorting_2 {
+  background-color: #ffe2e2;
+}
+
+/* line 493, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+tr.even.gradeX td.sorting_3 {
+  background-color: #ffe2e2;
+}
+
+/* line 497, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+tr.odd.gradeU td.sorting_1 {
+  background-color: #c4c4c4;
+}
+
+/* line 501, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+tr.odd.gradeU td.sorting_2 {
+  background-color: #d1d1d1;
+}
+
+/* line 505, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+tr.odd.gradeU td.sorting_3 {
+  background-color: #d1d1d1;
+}
+
+/* line 509, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+tr.even.gradeU td.sorting_1 {
+  background-color: #d5d5d5;
+}
+
+/* line 513, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+tr.even.gradeU td.sorting_2 {
+  background-color: #e2e2e2;
+}
+
+/* line 517, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+tr.even.gradeU td.sorting_3 {
+  background-color: #e2e2e2;
+}
+
+/*
+ * Row highlighting example
+ */
+/* line 525, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+.ex_highlight #example tbody tr.even:hover, #example tbody tr.even td.highlighted {
+  background-color: #ECFFB3;
+}
+
+/* line 529, /home/mindfire/.rvm/gems/ruby-2.3.0/bundler/gems/jquery-datatables-rails-d486b31b192a/app/assets/stylesheets/dataTables/src/demo_table_jui.css.scss */
+.ex_highlight #example tbody tr.odd:hover, #example tbody tr.odd td.highlighted {
+  background-color: #E6FF99;
+}
+/*
+* Start Bootstrap - Landing Page (http://startbootstrap.com/)
+* Copyright 2013-2016 Start Bootstrap
+* Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+*/
+
+
+body,
+html {
+width: 100%;
+height: 100%;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 700;
+}
+
+.topnav {
+  font-size: 14px; 
+}
+
+.lead {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+
+
+.intro-message {
+  position: relative;
+  padding-top: 20%;
+  padding-bottom: 20%;
+}
+
+.intro-message > h1 {
+  margin: 0;
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+  font-size: 5em;
+}
+
+.intro-divider {
+  width: 400px;
+  border-top: 1px solid #f8f8f8;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.intro-message > h3 {
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+}
+
+@media(max-width:767px) {
+  .intro-message {
+      padding-bottom: 15%;
+  }
+
+  .intro-message > h1 {
+      font-size: 3em;
+  }
+
+  ul.intro-social-buttons > li {
+      display: block;
+      margin-bottom: 20px;
+      padding: 0;
+  }
+
+  ul.intro-social-buttons > li:last-child {
+      margin-bottom: 0;
+  }
+
+  .intro-divider {
+      width: 100%;
+  }
+}
+
+.network-name {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.content-section-a {
+  padding: 50px 0;
+  background-color: #f8f8f8;
+}
+
+.content-section-b {
+  padding: 50px 0;
+  border-top: 1px solid #e7e7e7;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.section-heading {
+  margin-bottom: 30px;
+}
+
+.section-heading-spacer {
+  float: left;
+  width: 200px;
+  border-top: 3px solid #e7e7e7;
+}
+
+.banner {
+  padding: 100px 0;
+  color: #f8f8f8;
+  background: url(../img/banner-bg.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.banner h2 {
+  margin: 0;
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+  font-size: 3em;
+}
+
+.banner ul {
+  margin-bottom: 0;
+}
+
+.banner-social-buttons {
+  float: right;
+  margin-top: 0;
+}
+
+@media(max-width:1199px) {
+  ul.banner-social-buttons {
+      float: left;
+      margin-top: 15px;
+  }
+}
+
+@media(max-width:767px) {
+  .banner h2 {
+      margin: 0;
+      text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+      font-size: 3em;
+  }
+
+  ul.banner-social-buttons > li {
+    display: block;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+
+  ul.banner-social-buttons > li:last-child {
+    margin-bottom: 0;
+  }
+}
+
+footer {
+padding: 50px 0;
+background-color: #f8f8f8;
+}
+
+p.copyright {
+margin: 15px 0 0;
+}
+/* line 6, /home/mindfire/projects/rails/demo/workspace/demo_project/app/assets/stylesheets/posts.css.scss */
+.pagination .previous_page {
+  background: #7777ff;
+  color: white;
+}
+/* line 7, /home/mindfire/projects/rails/demo/workspace/demo_project/app/assets/stylesheets/posts.css.scss */
+.pagination .previous_page.disabled {
+  background: white;
+  color: #777;
+}
+/* line 8, /home/mindfire/projects/rails/demo/workspace/demo_project/app/assets/stylesheets/posts.css.scss */
+.pagination .current {
+  background: lightgreen;
+}
+/* line 9, /home/mindfire/projects/rails/demo/workspace/demo_project/app/assets/stylesheets/posts.css.scss */
+.pagination .next_page {
+  background: #7777ff;
+  color: white;
+}
+/* line 10, /home/mindfire/projects/rails/demo/workspace/demo_project/app/assets/stylesheets/posts.css.scss */
+.pagination .next_page.disabled {
+  background: white;
+  color: #777;
+}
+/* line 1, /home/mindfire/projects/rails/demo/workspace/demo_project/app/assets/stylesheets/scaffolds.scss */
+body {
+  background-color: transparent;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 9, /home/mindfire/projects/rails/demo/workspace/demo_project/app/assets/stylesheets/scaffolds.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 15, /home/mindfire/projects/rails/demo/workspace/demo_project/app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 21, /home/mindfire/projects/rails/demo/workspace/demo_project/app/assets/stylesheets/scaffolds.scss */
+a {
+  color: #000;
+}
+/* line 24, /home/mindfire/projects/rails/demo/workspace/demo_project/app/assets/stylesheets/scaffolds.scss */
+a:visited {
+  color: #000;
+}
+/* line 28, /home/mindfire/projects/rails/demo/workspace/demo_project/app/assets/stylesheets/scaffolds.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 35, /home/mindfire/projects/rails/demo/workspace/demo_project/app/assets/stylesheets/scaffolds.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 40, /home/mindfire/projects/rails/demo/workspace/demo_project/app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 44, /home/mindfire/projects/rails/demo/workspace/demo_project/app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 50, /home/mindfire/projects/rails/demo/workspace/demo_project/app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 58, /home/mindfire/projects/rails/demo/workspace/demo_project/app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 69, /home/mindfire/projects/rails/demo/workspace/demo_project/app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}

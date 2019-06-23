@@ -1,0 +1,29 @@
+<% javascript_url "pagination" %>  <!-- Calling pagination.js from app/assets -->
+<% @post.order(updated_at: :desc).each do |post| %>
+  <div class="post_wrapper">
+    <div class='btn-toolbar pull-right'>
+    <% if can? :destroy, post%>
+      <div class='btn-group'><%= link_to "<i class='glyphicon glyphicon-remove-sign'></i>&nbsp; Delete Post".html_safe,  group_post_path(@group,post), method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
+    <% end %>  
+    </div>
+
+    <div class='btn-toolbar pull-left'>
+      <h4>
+        <%= link_to "#{post.title}".html_safe, group_post_path(@group,post)%>  
+        <small>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;Created <%= time_ago_in_words(post.created_at) %> Ago
+        by<%= post.user.name %></p>  
+        </small>
+      </h4>
+    </div>
+    <hr>
+    <br>
+    <p class="body">
+      <blockquote><p>Description:</p></blockquote>
+      <%= post.body %>      
+    </p>
+    <br>
+  </div>
+<% end %>
+<%= will_paginate @post %>  <!-- It will give page navigation bar for changing pages -->

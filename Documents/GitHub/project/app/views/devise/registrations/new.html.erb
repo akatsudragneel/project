@@ -1,0 +1,88 @@
+<h2>Sign up</h2>
+<div class="container">
+<%= bootstrap_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+  <div class="field">
+  <div class="row">
+      <div class="form-group col-xs-4 col-lg-4 col-md-4">
+      </div>
+      <div class="form-group col-xs-4 col-lg-4 col-md-4">    
+      <%= f.text_field :name %>
+      </div>
+  </div>    
+  <div class="field">
+  <div class="row">
+      <div class="form-group col-xs-4 col-lg-4 col-md-4">
+      </div>
+      <div class="form-group col-xs-4 col-lg-4 col-md-4">
+        <%= f.email_field :email, autofocus: true %>
+      </div>
+  </div>
+  <% if f.object.password_required? %>
+  <div class="field">
+  <div class="row">
+    <div class="form-group col-xs-4 col-lg-4 col-md-4">
+    </div>
+    <div class="form-group col-xs-4 col-lg-4 col-md-4">
+      <%= f.password_field :password, autocomplete: "off" %>
+      <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <% end %><br />  
+    </div>
+  </div>
+  <div class="field">
+  <div class="row">
+      <div class="form-group col-xs-4 col-lg-4 col-md-4">
+      </div>
+      <div class="form-group col-xs-4 col-lg-4 col-md-4">
+      
+  
+    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  </div>
+  </div>
+  <% end %>
+  <div class="row">
+      <div class="form-group col-xs-4 col-lg-4 col-md-4">
+      </div>
+      <div class="form-group col-xs-4 col-lg-4 col-md-4">
+      
+  <div class="g-recaptcha" data-sitekey="6LfWVi0UAAAAAGnr2VEsEvGSkxF-Kvu6uipCKBgI" ></div>
+  </div>
+  </div>
+  <div class="row">
+      <div class="form-group col-xs-4 col-lg-4 col-md-4">
+      </div>
+      <div class="form-group col-xs-4 col-lg-4 col-md-4">
+  <div class="actions">
+    <%= f.submit "Sign up", class: "btn btn-success"%>
+  </div>
+  </div>
+  <% end %>
+</div>
+</div>
+
+<%= render "devise/shared/links" %>
+  <div class="button_container">
+  <div class="row row-centered">
+  <div class="omb_login">
+    <h3 class="omb_authTitle">Login with</h3>
+      <div class="container">
+      <div class="row omb_row-sm-offset-3 omb_socialButtons">
+        <div class="col-xs-4 col-sm-2">
+          <%= link_to "Facebook", user_facebook_omniauth_authorize_path, class: "btn btn-lg btn-block omb_btn-facebook" %>
+          <i class="fa fa-facebook visible-xs"></i>
+          <span class="hidden-xs"></span>
+          </a>
+        </div>
+        
+        <div class="col-xs-4 col-sm-2">
+          <%= link_to "Google+", user_google_oauth2_omniauth_authorize_path, class: "btn btn-lg btn-block omb_btn-google" %>
+          <i class="fa fa-google-plus visible-xs"></i>
+          <span class="hidden-xs"></span>
+          </a>
+        </div>
+        </div>
+    </div>  
+  </div>
+  </div>    
+</div>

@@ -1,0 +1,36 @@
+.btn-toolbar.pull-right
+  %button.btn.btn-danger{"data-dismiss" => "modal", :type => "button"}
+    %span.glyphicon.glyphicon-remove
+#modal
+  %h1 User Details
+  %table#users-table.table.table-bordered
+    %tbody
+      %tr
+        %p
+        %td 1
+        %td Name
+        %td= @user.name
+      %tr
+        %td 2
+        %td Email
+        %td= @user.email
+      %tr
+        %td 3
+        %td Role
+        %td= @user.role.name
+      %tr
+        %td 4
+        %td Approval Status
+        %td= @user.approved
+      %tr
+        %td 5
+        %td Joined On
+        %td= @joined_on
+      %tr
+        %td 6
+        %td Last Login
+        %td= @last_login
+      %tr
+        %td 7
+        %td No. of times logged in
+        %td= @user.sign_in_count

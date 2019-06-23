@@ -1,0 +1,13 @@
+/ Form partial for getting comments input from user
+.container
+  = bootstrap_form_for([@group,@post,@post.comments.build]) do |f|
+    %p
+      = f.hidden_field :name ,value: "#{current_user.name}"
+    .row
+      .form-group.col-xs-4.col-lg-12.col-md-12
+      .form-group.col-xs-4.col-lg-12.col-md-12
+        %p
+          = f.text_area :body, :required => true
+        %br/
+    %p
+      = f.submit

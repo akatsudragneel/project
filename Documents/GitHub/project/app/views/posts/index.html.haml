@@ -1,0 +1,13 @@
+%h2
+  Group Name : #{"#{@group.name}"}
+%small
+%p
+  Created By #{"#{@group.created_by}"}
+.btn-group
+  = link_to "New Post", new_group_post_path, class: "btn btn-default"
+#posts.container
+  = render 'posts'
+  / Rendering posts partial with ajax for paginating all posts
+  %br/
+  %br/
+  %br/

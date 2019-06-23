@@ -1,0 +1,29 @@
+.modal-body
+  %h1 Contact on LinkedIn:
+  %br/
+  %br/
+  / Button trigger modal
+  %button.btn.btn-primary{"data-target" => "#myModal", "data-toggle" => "modal", :title => "View my LinkedIn profile"}
+    Details
+  %script{:src => "http://platform.linkedin.com/in.js", :type => "text/javascript"}
+  %script{"data-format" => "inline", "data-id" => "", :type => "IN/MemberProfile"}
+  %a{:href => "http://www.linkedin.com"}
+    %img{:alt => "View Rob McCormack's profile on LinkedIn", :border => "0", :height => "33", :src => "https://static.licdn.com/scds/common/u/img/webpromo/btn_myprofile_160x33.png", :width => "160"}/
+  / Modal
+  #myModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+    .modal-dialog
+      .modal-content
+        .modal-header
+          %h4#myModalLabel.modal-title
+            Akash Prajapati
+            %small
+          %p Mindfire Solutions
+          %p Email : akashp@mindfiresolutions.com
+        .modal-body
+          %script{:src => "http://platform.linkedin.com/in.js", :type => "text/javascript"}
+    / #/myModal
+  / ./row
+  .modal-footer
+    %center
+      %button.btn.btn-danger{"data-dismiss" => "modal", :type => "button"} Close
+/ ./container

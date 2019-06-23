@@ -1,0 +1,34 @@
+/ A partial which is called to diaplay comments related to post or comments.
+.comment-container
+  #comment-align
+    .post-comments
+      #comment-container
+        .media-heading
+          %button.btn.btn-default.btn-xs{"aria-controls" => "collapseExample", "aria-expanded" => "false", "data-target" => "#collapse#{"#{comment.id}"}", "data-toggle" => "collapse", :type => "button"}
+            %span.glyphicon.glyphicon-minus{"aria-hidden" => "true"}
+          %span.label.label-info= comment.name
+          Commented #{time_ago_in_words(comment.created_at)} Ago
+        .panel-collapse.collapse.in{:id => "collapse#{"#{comment.id}"}"}
+          .media-body
+            %p.comment_body= comment.body
+          .comment-meta
+            %span
+              - if can? :edit, comment
+                = link_to "<i class='glyphicon glyphicon-pencil'></i>&nbsp; Edit ".html_safe, edit_group_post_comment_path(@group,@post,comment),"data-toggle" => "modal", 'data-target' => "#EditModal" if comment.commentable_type == 'Post'
+            %span
+              - if can? :destroy, comment
+                = link_to " Delete", group_post_comment_path(@group,@post,comment), method: :delete, class: "fi-minus" , data: { confirm: 'Are you Sure?', 'confirm-button-text': 'Yes I am' , 'cancel-button-text': 'No way', 'confirm-button-color': '#66CD00'}
+            %span
+              %a{"aria-controls" => "collapseExample", "aria-expanded" => "false", "data-toggle" => "collapse", :href => "#reply_comment#{"#{comment.id}"}", :role => "button"} Reply
+            .collapse{:id => "reply_comment#{"#{comment.id}"}"}
+              = form_for [@group,@post,comment,Comment.new] do |f|
+                = f.text_area :body, placeholder: "Add a Reply", cols:"30",:required => true
+                %br/
+                = f.submit "Reply"
+            - unless comment.comments.empty?
+              %ul
+                #nestcomment
+                  = render :partial => 'comments/comment', :collection => comment.comments
+#EditModal.modal.fade
+  .modal-dialog.modal-lg
+    .modal-content

@@ -1,0 +1,12 @@
+/ edit modal page for editing comments
+#form
+  %h2 Edit Comment
+  = bootstrap_form_for [@group, @post,@comment], url: group_post_comment_path do |f|
+    %p
+      = f.text_area :body,:required => true
+      - f.hidden_field :user_id, value: "#{current_user.id}"
+    %p
+      = f.submit
+.modal-footer
+  %center
+    %button.btn.btn-danger{"aria-hidden" => "true", "data-dismiss" => "modal", :onclick => "javascript:window.location.reload()", :type => "button"} Close

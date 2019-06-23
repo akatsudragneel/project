@@ -1,0 +1,29 @@
+/ Button to invite unregisted user is disabled for regular user
+- if !current_user.regular?
+  #invitation.btn-group
+    = link_to 'Invite Unregistered Users', invitations_path(invitation_accepted_at: nil), class: "btn btn-success"
+    %br
+/ Displays list of groups members with button for adding/removing particular members from that group
+%h5 Edit Group Members
+%center
+  .table-responsive
+    .container
+      %table#users-table
+        %thead
+          %td Name
+          %td Add/Remove
+        %tbody
+          - @users.each do |user|
+            %tr
+              %td
+                %center= link_to "#{user.name}".html_safe, user, "data-toggle" => "modal", 'data-target' => '#showModal'
+              - if @group.users.include? user
+                %td
+                  %center
+                    = link_to "Remove",remove_member_group_path(:group_id => @group.id, :user_id => user.id), class: "btn btn-danger", method: :patch
+              - else
+                %td
+                  %center
+                    = link_to "Add",group_path(:group_id => @group.id, :user_id => user.id), class: "btn btn-success", method: :put
+      = link_to "Back",groups_path, class:"btn btn-default"
+      = link_to "Finished",groups_path, class:"btn btn-default"

@@ -1,0 +1,16 @@
+%table.table.table-striped.table-bordered.dt-responsive.nowrap{:cellspacing => "10", :width => "100%"}
+  %thead
+    %tr
+      %td Invitee Name
+      %td Invitee Email
+      %td Invitation Send At
+      %td Invited By
+  - @invites = User.invitation_not_accepted
+  %tbody
+    - @invites.each do |i|
+      %tr
+        %td= i.name
+        %td= i.email
+        %td= i.invitation_sent_at
+        - invitee = User.find(i.invited_by_id)
+        %td= invitee.name
