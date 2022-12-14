@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/rweng/jquery-datatables-rails.git
+  remote: https://github.com/rweng/jquery-datatables-rails.git
   revision: d486b31b192a2924b1913e080ad23460e6b96d31
   specs:
     jquery-datatables-rails (3.4.0)
@@ -77,6 +77,7 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
+    crass (1.0.6)
     css_parser (1.2.6)
       addressable
       rdoc
@@ -177,7 +178,8 @@ GEM
     logging (2.2.2)
       little-plugger (~> 1.1)
       multi_json (~> 1.10)
-    loofah (2.0.3)
+    loofah (2.19.1)
+      crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     lumberjack (1.0.12)
     mail (2.6.6)
@@ -188,14 +190,15 @@ GEM
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
     mini_mime (0.1.4)
-    mini_portile2 (2.2.0)
+    mini_portile2 (2.8.0)
     minitest (5.10.3)
     multi_json (1.12.1)
     multi_xml (0.6.0)
     multipart-post (2.0.0)
     nenv (0.3.0)
-    nokogiri (1.8.0)
-      mini_portile2 (~> 2.2.0)
+    nokogiri (1.13.10)
+      mini_portile2 (~> 2.8.0)
+      racc (~> 1.4)
     notiffany (0.1.1)
       nenv (~> 0.1)
       shellany (~> 0.0)
@@ -225,6 +228,7 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
     public_suffix (2.0.5)
+    racc (1.6.1)
     rack (1.6.8)
     rack-test (0.6.3)
       rack (>= 1.0)
